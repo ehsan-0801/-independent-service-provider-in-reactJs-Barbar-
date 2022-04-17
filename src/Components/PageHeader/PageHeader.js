@@ -14,6 +14,12 @@ const PageHeader = () => {
                     <div><div>ENTHUSIASTIC</div></div>
                 </div>
             </div>
+            <div className="container">
+                <div className="text-center my-2">
+                    <span className="mx-3 text-center text-primary">PHONE:01XXXXXXXX</span>
+                    <span className="mx-3 text-center text-primary">EMAIL:abc@gmail.com</span>
+                </div>
+            </div>
         </div>
     );
 };
