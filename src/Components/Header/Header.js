@@ -20,8 +20,8 @@ const Header = () => {
                             <Nav.Link as={ Link } className="mx-4 text-light" to="">ABOUT</Nav.Link>
                             <Nav.Link className="mx-4 text-light" href="home#contact">CONTACT</Nav.Link>
                             <Nav.Link as={ Link } className="mx-4 text-light" to="">BLOG</Nav.Link>
-                            <Nav.Link as={ Link } className="mx-4 text-light" to="">LOGIN</Nav.Link>
-                            <Nav.Link as={ Link } className="mx-4 text-light" to="">SIGNUP</Nav.Link>
+                            <Nav.Link as={ Link } className="mx-4 text-light" to="login">LOGIN</Nav.Link>
+                            <Nav.Link as={ Link } className="mx-4 text-light" to="signup">SIGNUP</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
