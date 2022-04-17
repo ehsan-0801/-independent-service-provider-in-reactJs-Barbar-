@@ -17,7 +17,7 @@ const Banner = () => {
                     <p className="fs-4" >I serve the people in my saloon room and I also provide home service to the clients</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={ 500 }>
+            <Carousel.Item interval={ 1000 }>
                 <img
                     className="d-block w-100"
                     src={ sliderImg2 }
@@ -28,7 +28,7 @@ const Banner = () => {
                     <p className="fs-4" >I have my own space where I provide services to my clients</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={ 500 }>
+            <Carousel.Item interval={ 1000 }>
                 <img
                     className="d-block w-100"
                     src={ sliderImg3 }
@@ -36,7 +36,7 @@ const Banner = () => {
                 />
                 <Carousel.Caption>
                     <h3 className="fs-2 fw-bold">I also provide home service</h3>
-                    <p className="fs-4" >I have my own kits which I carry to the clients home and provide serices there.</p>
+                    <p className="fs-4" >I carry my kits to the clients home and provide serices there.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

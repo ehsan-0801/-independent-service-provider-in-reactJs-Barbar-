@@ -1,0 +1,49 @@
+[{
+    "serviceId": "625bfa0933d5463c83fa5b3f",
+    "serviceName": "Hair Cut For Men",
+    "description": "I provide Hair Cut Service to men at a very reasonable price.You can Call me in your place or come to my private saloon for service\r\n",
+    "image": "https://i.ibb.co/bQRg9dh/hair-Cut-For-Men.jpg",
+    "price": 200.00,
+    "homeService": 250.00
+  },
+  {
+    "serviceId": "625bfa09de2c0b7c47ff2c5c",
+    "serviceName": "Hair Color For Men",
+    "description": "I also color your hair in Home And in My saloon. You can Choose your preffered color.\r\n",
+    "image": "https://i.ibb.co/BK4Kqs1/Hair-Color.jpg",
+    "price": 150.00,
+    "homeService": 200.00
+  },
+  {
+    "serviceId": "625bfa09ebb5b64e881338f4",
+    "serviceName": "Shaving And Trimming",
+    "description": "Shaving and Trimming is also provided as a service. You can take Shaving and Trimming service according to your preference.\r\n",
+    "image": "https://i.ibb.co/r0Zp6Rk/Shaving.jpg",
+    "price": 100.00,
+    "homeService": 150.00
+  },
+  {
+    "serviceId": "625bfa0976e6108b7342a885",
+    "serviceName": "Facial For Men",
+    "description": "Man also need some Facial for their skin care which I provide at my saloon as well as in your place.\r\n",
+    "image": "https://i.ibb.co/QjVfNy9/Facial-For-Men.jpg",
+    "price": 300.00,
+    "homeService": 250.00
+  },
+  {
+    "serviceId": "625bfa094f03726e031dd9a3",
+    "serviceName": "Pedicure And Menicure",
+    "description": "Pedicure and Menicure For Men is very important for taking care Your Body. Which is also provided by me.\r\n",
+    "image": "https://i.ibb.co/ZfwqjrS/pedicure-And-Menicure.jpg",
+    "price": 250.00,
+    "homeService": 300.00
+  },
+  {
+    "serviceId": "625bfa09d36192abeb831642",
+    "serviceName": "Baby Hair Cut",
+    "description": "I provide the Baby hair cut in home and in my saloon too.\r\n",
+    "image": "https://i.ibb.co/vQN3RmZ/Baby-Hair-Cut.jpg",
+    "price": 100.00,
+    "homeService": 150.00
+  }
+]
