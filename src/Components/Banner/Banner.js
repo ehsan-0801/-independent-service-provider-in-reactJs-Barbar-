@@ -6,7 +6,7 @@ import sliderImg3 from '../../Images/slidermg3.jpg'
 const Banner = () => {
     return (
         <Carousel>
-            <Carousel.Item interval={ 1000 }>
+            <Carousel.Item interval={ 3000 }>
                 <img
                     className="d-block w-100"
                     src={ sliderImg1 }
@@ -17,7 +17,7 @@ const Banner = () => {
                     <p className="fs-4" >I serve the people in my saloon room and I also provide home service to the clients</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={ 1000 }>
+            <Carousel.Item interval={ 3000 }>
                 <img
                     className="d-block w-100"
                     src={ sliderImg2 }
@@ -28,7 +28,7 @@ const Banner = () => {
                     <p className="fs-4" >I have my own space where I provide services to my clients</p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={ 1000 }>
+            <Carousel.Item interval={ 3000 }>
                 <img
                     className="d-block w-100"
                     src={ sliderImg3 }
