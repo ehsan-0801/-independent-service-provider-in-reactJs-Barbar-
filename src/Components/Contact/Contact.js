@@ -4,8 +4,8 @@ import { Button, Form } from 'react-bootstrap';
 const Contact = () => {
     return (
         <>
-            <h2 className="p-5 text-center text-light" id="contact" style={ { background: '#006d77' } }>Contact me</h2>
-            <div className="w-100 container">
+            <h2 className="p-5 text-center text-light" style={ { background: '#006d77' } }>Contact me</h2>
+            <div id="contact" className="w-100 container">
                 <Form>
                     <Form.Label>What are your Queries?</Form.Label>
                     <Form.Select aria-label="Default select example">
