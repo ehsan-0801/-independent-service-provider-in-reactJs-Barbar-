@@ -1,18 +1,57 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const Login = () => {
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    let errorElement;
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    if (error) {
+        errorElement = <p className='text-danger'>Error: { error?.message }</p>
+    }
+    const handleSubmit = event => {
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+
+        signInWithEmailAndPassword(email, password);
+    }
+
+    const navigateRegister = event => {
+        navigate('/signup');
+    }
+
     return (
         <div className="container w-50 my-5">
             <h2 className="text-center fw-bold my-3">Please Login</h2>
-            <Form className="border border-2 px-2 py-4 shadow rounded">
+            <Form onSubmit={ handleSubmit } className="border border-2 px-2 py-4 shadow rounded">
                 <Form.Group as={ Row } className="mb-3" controlId="formHorizontalEmail">
                     <Form.Label column sm={ 2 }>
                         Email
                     </Form.Label>
                     <Col sm={ 10 }>
-                        <Form.Control type="email" placeholder="Email" />
+                        <Form.Control ref={ emailRef } type="email" placeholder="Email" required />
                     </Col>
                 </Form.Group>
                 <Form.Group as={ Row } className="mb-3" controlId="formHorizontalPassword">
@@ -20,12 +59,7 @@ const Login = () => {
                         Password
                     </Form.Label>
                     <Col sm={ 10 }>
-                        <Form.Control type="password" placeholder="Password" />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={ Row } className="mb-3" controlId="formHorizontalCheck">
-                    <Col sm={ { span: 10, offset: 2 } }>
-                        <Form.Check label="Remember me" />
+                        <Form.Control ref={ passwordRef } type="password" placeholder="Password" required />
                     </Col>
                 </Form.Group>
                 <Form.Group as={ Row } className="mb-3">
@@ -33,7 +67,13 @@ const Login = () => {
                         <Button type="submit" variant="secondary w-100 mx-auto d-block mb-2">Sign in</Button>
                     </Col>
                 </Form.Group>
-                <p>New Here? <Link to="/signup" className='text-primary pe-auto text-decoration-none' >Please Register</Link> </p>
+                { errorElement }
+                <div className="row">
+                    <div className="col-md-6 col-sm-12"></div>
+                    <div className="col-md-6 col-sm-12">
+                        <p className="me-0">New Here? <Link to="/signup" onClick={ navigateRegister } className='text-primary pe-auto text-decoration-none' >Please Register</Link> </p>
+                    </div>
+                </div>
             </Form>
         </div>
     );

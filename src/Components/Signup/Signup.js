@@ -71,15 +71,27 @@ const Signup = () => {
                         <Form.Control type="password" placeholder="Password" name="Cpassword" required />
                     </Col>
                 </Form.Group>
-                <input onClick={ () => setAgree(!agree) } type="checkbox" name="terms" id="terms" />
-                <label className={ `ps-2 ${agree ? 'text-primary' : 'text-danger'}` } htmlFor="terms">Accept Genius Car Terms and Conditions</label>
+
+                <div className="row">
+                    <div className="col-md-6"></div>
+                    <div className="col-md-6">
+                        <input onClick={ () => setAgree(!agree) } type="checkbox" name="terms" id="terms" />
+                        <label className={ `ps-2 ${agree ? 'text-primary' : 'text-danger'}` } htmlFor="terms">Accept the Terms and Conditions please</label>
+                    </div>
+                </div>
                 <Form.Group as={ Row } className="mb-3">
                     <input
                         className='w-50 mx-auto btn btn-secondary mt-2'
                         type="submit"
                         value="Register" />
                 </Form.Group>
-                <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' >Please Login</Link> </p>
+                <div className="row">
+                    <div className="col-md-6"></div>
+                    <div className="col-md-6">
+                        <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' >Please Login</Link> </p>
+                    </div>
+                </div>
+
             </Form>
         </div>
     );
