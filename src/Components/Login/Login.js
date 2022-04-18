@@ -4,6 +4,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -74,6 +75,7 @@ const Login = () => {
                         <p className="me-0">New Here? <Link to="/signup" onClick={ navigateRegister } className='text-primary pe-auto text-decoration-none' >Please Register</Link> </p>
                     </div>
                 </div>
+                <SocialLogin></SocialLogin>
             </Form>
         </div>
     );
