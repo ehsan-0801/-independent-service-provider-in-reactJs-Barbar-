@@ -15,7 +15,7 @@ const Service = ({ service }) => {
                 </div>
             </div>
             <p className="border border-1 border-secondary">{ description }</p>
-            <button className='btn btn-outline-secondary' >GO TO CHECKOUT</button>
+            <button className='btn btn-outline-secondary' >BOOK NOW</button>
         </div >
     );
 };

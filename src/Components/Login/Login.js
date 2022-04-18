@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -32,6 +33,7 @@ const Login = () => {
                         <Button type="submit" variant="secondary w-100 mx-auto d-block mb-2">Sign in</Button>
                     </Col>
                 </Form.Group>
+                <p>New Here? <Link to="/signup" className='text-primary pe-auto text-decoration-none' >Please Register</Link> </p>
             </Form>
         </div>
     );
