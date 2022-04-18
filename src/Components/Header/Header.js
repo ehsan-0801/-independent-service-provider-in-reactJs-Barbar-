@@ -25,15 +25,15 @@ const Header = () => {
                         <Nav className="me-0 navlinks ">
                             <Nav.Link as={ Link } className="mx-4 text-light" to="/home">HOME</Nav.Link>
                             <Nav.Link className="mx-4 text-light" href="home#services">SERVICES</Nav.Link>
-                            <Nav.Link as={ Link } className="mx-4 text-light" to="">ABOUT</Nav.Link>
+                            <Nav.Link as={ Link } className="mx-4 text-light" to="/about">ABOUT</Nav.Link>
                             <Nav.Link className="mx-4 text-light" href="home#contact">CONTACT</Nav.Link>
-                            <Nav.Link as={ Link } className="mx-4 text-light" to="">BLOG</Nav.Link>
+                            <Nav.Link as={ Link } className="mx-4 text-light" to="/blog">BLOG</Nav.Link>
                             {
                                 user ?
-                                    <button className='btn btn-link text-light text-decoration-none' onClick={ handleSignOut }>sign out</button>
+                                    <button className='btn btn-link text-light text-decoration-none' onClick={ handleSignOut }>SIGN OUT</button>
                                     :
                                     <Nav.Link as={ Link } className='btn btn-link text-light' to="login">
-                                        Login
+                                        LOGIN
                                     </Nav.Link> }
                             <Nav.Link as={ Link } className="mx-4 text-light" to="signup">SIGNUP</Nav.Link>
                         </Nav>
